@@ -1,12 +1,12 @@
 class Event < ApplicationRecord
   after_create :attendance_email
 
-  validates :start_date, presence: true, if: :start_date_is_possible?
-  validates :duration, presence: true, numericality: { only_integer: true, greater_than: 0, :modulo => 5 }
-  validates :title, presence: true, length: { in: 5..140 }
-  validates :description, presence: true, length: { in: 20..1000 }
-  validates :price, presence: true, numericality: { only_integer: true, greater_than: 0, less_than: 1000 }
-  validates :location, presence: true
+  #validates :start_date, presence: true, if: :start_date_is_possible?
+  #validates :duration, presence: true, numericality: { only_integer: true, greater_than: 0, :modulo => 5 }
+  #validates :title, presence: true, length: { in: 5..140 }
+  #validates :description, presence: true, length: { in: 20..1000 }
+  #validates :price, presence: true, numericality: { only_integer: true, greater_than: 0, less_than: 1000 }
+  #validates :location, presence: true
 
   def start_date_is_possible?
     #Afficher message d'erreur à moins que "Date début > Date Aujourd'hui"
