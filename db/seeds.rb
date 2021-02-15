@@ -15,3 +15,7 @@ end
 5.times do 
   Attendance.create(stripe_customer_id: "stringtest")
 end
+
+2.times do
+  Event.create(start_date: Faker::Time.between(from: DateTime.now, to: DateTime.now + 60), duration: Faker::Number.number(digits: 10), title: Faker::Lorem.characters, description: Faker::Lorem.characters, price: Faker::Number.within(range: 1..1000), location: Faker::Address.city)
+end
