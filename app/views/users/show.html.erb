@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <div class="card text-center">
+    <%= image_tag("user.jpg") %>
+    <div class="card-body">
+      <h1 class="card-title"><%= @user.first_name %>  <%= @user.last_name %></h1>
+      <h5>Qui suis-je ?</h5>
+      <p class="card-text"><%= @user.description %></p>
+      <p>Contacte-moi : <%= @user.email %></p>
+    </div>
+  </div>
 
-<p>
-  <strong>Encrypted password:</strong>
-  <%= @user.encrypted_password %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @user.description %>
-</p>
+  <ul class="list-group list-group-flush">
+    <% @events.each do |event| %>
+        <li class="list-group-item">
+          <div><%= event.title %></div>
+          <div><%= link_to "Voir l'évènement", event_path(event.id), class: "btn btn-secondary" %></div>
+        </li>
+    <% end %>
+  </ul>
+</div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', root_path %>
+</div>

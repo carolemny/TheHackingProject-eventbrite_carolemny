@@ -26,6 +26,9 @@ body{
 .container{
   padding: 1em;
 }
+div{
+  margin: 0.5em;
+}
 h1{
   font-weight: bold;
 }
@@ -39,9 +42,11 @@ h6{
 /* Alertes */
 .notice{
   text-align: center;
+  color: green;
 }
 .alert{
   text-align: center;
+  color: red;
 }
 
 /* Navbar */ 

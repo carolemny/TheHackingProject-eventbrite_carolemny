@@ -1,5 +1,24 @@
-<h1>New Event</h1>
+<div class="container">
+  
+  <h1>Créer un évènement</h1>
+  <div>
+    <%= form_tag url_for(action: 'create'), method: "post" do %>
+        <div><%= label_tag 'Quand aura lieu ton évènement ?' %></div>
+        <div><%= text_field_tag 'start_date', @event.start_date, class: "form-control" %></div>
+        <div><%= label_tag 'Quelle sera sa durée ?' %></div>
+        <div><%= text_field_tag 'duration', @event.duration, class: "form-control" %></div>
+        <div><%= label_tag 'Donne un nom à ton évènement :' %></div>
+        <div><%= text_field_tag 'title', @event.title, class: "form-control" %></div>
+        <div><%= label_tag 'Décris ton évènement :' %></div>
+        <div><%= text_field_tag 'description', @event.description, class: "form-control" %></div>
+        <div><%= label_tag 'Indique le prix de la participation (€) :' %></div>
+        <div><%= text_field_tag 'price', @event.price, class: "form-control" %></div>
+        <div><%= label_tag 'Où sera le rendez-vous ?' %></div>
+        <div><%= text_field_tag 'location', @event.location, class: "form-control" %></div>
+        <div><%= submit_tag "Valider", class: "btn btn-secondary"%></div>
+    <% end %>
+  </div>
+</div>
 
-<%= render 'form', event: @event %>
 
 <%= link_to 'Back', events_path %>
