@@ -1,24 +1,7 @@
-# README
+# EVENTBRITE_CAROLEMNY
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Voici ma première application Rails disponible en ligne sur Heroku : 
+https://eventbritecarolemny.herokuapp.com/ 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+L'occasion de découvrir le MVC et notamment la mise en place d'un système complet d'authentification d'utilisateurs,
+grâce aux Gem que vous retrouverez en faisant Bundle Install.

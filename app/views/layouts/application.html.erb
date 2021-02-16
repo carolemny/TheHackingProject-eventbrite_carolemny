@@ -20,7 +20,7 @@
   <body>
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Eventbritecarolemny</a>
+        <a class="navbar-brand text-monospace font-weight-bold text-muted" href="#" id="logo">EVENTBRITE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +44,7 @@
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"       aria-haspopup="true"    aria-expanded="false">Mon profil</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+                    <%= link_to "Mon profil", user_path(current_user), class: "dropdown-item" %>
                     <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                   </div>
                 </li>
@@ -53,12 +53,11 @@
         </div>
       </nav>
     </div>
-    
-  <div class="container">
+
+    <%= yield %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= yield %>
-  </div>
   </body>
 </html>

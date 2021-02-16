@@ -1,3 +1,18 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.change{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  background: url(asset-path('jumbotron3.jpg')) no-repeat center;
+  background-size: cover;
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  color: rgb(255, 255, 255);
+}
+.btn-secondary{
+  background-color: rgb(250, 246, 239);
+}

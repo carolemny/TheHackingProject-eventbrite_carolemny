@@ -1,37 +1,28 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Events</h1>
+<div class="jumbotron jumbotron-fluid change">
+  <div class="container">
+    <h1>Bienvenue<% if user_signed_in? == true %>, <%= current_user.first_name %> <% end %></h1>
+    <p>Envie d'organiser, ou simplement de participer à un évènement dans ta ville ?</p>
+    <p>Tu es au bon endroit !</p>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Start date</th>
-      <th>Duration</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+<h1>Nos évènements</h1>
+  <div>
     <% @events.each do |event| %>
-      <tr>
-        <td><%= event.start_date %></td>
-        <td><%= event.duration %></td>
-        <td><%= event.title %></td>
-        <td><%= event.description %></td>
-        <td><%= event.price %></td>
-        <td><%= event.location %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card text-center bg-light mb-3 shadow bg-white rounded">
+        <div class="card-header "><h3><%= event.title %></h3></div>
+          <div class="card-body">
+            <p><%= event.start_date.strftime("Retrouvez nous le %e.%m.%Y à %H:%M") %> / Durée de l'évènement : <%= event.duration %> min.</p>
+            <h4>Quoi de prévu ? </h4>
+            <p><%= event.description %></p>
+            <p><%= event.price %> €</p>
+            <h6>Où se retrouve-t-on ? </h6>
+            <p><%= event.location %></p>
+            <p><%= link_to 'Voir plus', event, class:"btn btn-secondary" %></p>
+          </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
+  </div>
+</div>

@@ -14,7 +14,43 @@
  *= require_self
  */
 
+ @import "attendances";
+ @import "events";
+ @import "scaffolds";
+ @import "users";
 
- body{
-   margin: 0;
- }
+ /* General */
+body{
+  margin: 0;
+}
+.container{
+  padding: 1em;
+}
+h1{
+  font-weight: bold;
+}
+h4{
+  font-style: italic;
+}
+h6{
+  font-weight: bold;
+}
+
+/* Alertes */
+.notice{
+  text-align: center;
+}
+.alert{
+  text-align: center;
+}
+
+/* Navbar */ 
+#logo{
+  font-size: 2.5em;
+}
+.navbar-brand:hover{
+  background-color: transparent;
+}
+.nav-link:hover{
+  background-color: transparent;
+}
