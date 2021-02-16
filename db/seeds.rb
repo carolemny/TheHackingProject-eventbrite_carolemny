@@ -1,9 +1,7 @@
-User.destroy_all
-Event.destroy_all
-Attendance.destroy_all
+
 
 10.times do
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.paragraph(sentence_count: 3, supplemental: true), encrypted_password: "password", email: Faker::Internet.email(domain: 'yopmail.com'))
+  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.paragraph(sentence_count: 3, supplemental: true), password: "password", email: Faker::Internet.email(domain: 'yopmail.com'))
 end
 
 2.times do
