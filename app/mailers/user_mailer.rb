@@ -12,9 +12,8 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Bienvenue chez nous !') 
   end
 
-  def attendance_email(user, event)
-    @user = user
+  def attendance_email(event)
     @event = event
-    mail(to: @user.email, subject: 'Votre évènement est créé !')
+    mail(to: @event.user.email, subject: 'Votre évènement est créé !')
   end
 end
